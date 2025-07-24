@@ -1,5 +1,4 @@
 # api.py
-import uvicorn
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
@@ -157,7 +156,4 @@ async def analyser_csv(
     return {
         "kpis": kpis,
         "html_report": html_report
-    } 
-
-if __name__ == "__main__":
-    uvicorn.run("api:app", host="0.0.0.0", port=8000)
+    }
