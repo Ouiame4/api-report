@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from io import BytesIO
 import base64
-import uvicorn
 
 app = FastAPI(title="API Analyse Veille Médiatique")
 
@@ -158,5 +157,3 @@ async def analyser_csv(
         "kpis": kpis,
         "html_report": html_report
     }
-if __name__ == "__main__":
-    uvicorn.run("api:app", host="0.0.0.0", port=8000)
